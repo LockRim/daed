@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.22.0](https://github.com/LockRim/daed/compare/v1.21.1...v1.22.0) (2025-12-16)
+
+
+### Features
+
+* **dae-lsp:** add browser LSP support and fix completions ([32b5b49](https://github.com/LockRim/daed/commit/32b5b49abd58b8f16c72a2f2dd188bc7c2cf7877))
+* **parser:** add parser for dae language with AST and symbol information ([12b5754](https://github.com/LockRim/daed/commit/12b5754b8f53b5dbac00b9aac0839f5d52113736))
+* re-trigger release-please ([4febcf7](https://github.com/LockRim/daed/commit/4febcf7ebba807474e8215510669e0a756c31585))
+* trigger release ([e6618d5](https://github.com/LockRim/daed/commit/e6618d5cfb721dec3633278018e2f254c23daff9))
+* update pnpm workspace and add turbo configuration ([4484dc4](https://github.com/LockRim/daed/commit/4484dc43be6f1d229053bcc7bd589c528707024f))
+
+
+### Bug Fixes
+
+* remove rolldownOptions from build configuration ([632c33d](https://github.com/LockRim/daed/commit/632c33d620522c9d960321aa0ad6690f6b3fc2a2))
+
 ## [1.21.1](https://github.com/daeuniverse/daed/compare/v1.21.0...v1.21.1) (2025-12-07)
 
 
