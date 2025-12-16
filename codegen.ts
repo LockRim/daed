@@ -1,12 +1,12 @@
-import { CodegenConfig } from '@graphql-codegen/cli'
+import type { CodegenConfig } from '@graphql-codegen/cli'
+import process from 'node:process'
 
-// eslint-disable-next-line import/no-default-export
 export default {
   overwrite: true,
   schema: process.env.SCHEMA_PATH,
-  documents: 'src/**/*',
+  documents: 'apps/web/src/**/*',
   generates: {
-    'src/schemas/gql/': {
+    'apps/web/src/schemas/gql/': {
       preset: 'client',
     },
   },

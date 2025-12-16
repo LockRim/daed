@@ -9,7 +9,7 @@ daed:
 all: clean daed
 
 clean:
-	rm -rf dist && rm -f daed
+	rm -rf dist && rm -rf apps/web/dist && rm -f daed
 
 ## Begin Git Submodules
 .gitmodules.d.mk: .gitmodules Makefile
@@ -42,7 +42,11 @@ ifeq (,$(wildcard ./.git))
 endif
 dist: package.json pnpm-lock.yaml
 	$(PFLAGS) pnpm i
-	pnpm build
+	TURBO_TELEMETRY_DISABLED=1 DO_NOT_TRACK=1 pnpm build
+	@if [ -d "apps/web/dist" ]; then \
+		rm -rf dist; \
+		cp -r apps/web/dist dist; \
+	fi
 ## End Web
 
 ## Begin Bundle
